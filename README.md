@@ -41,25 +41,25 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 
 
 ```html
+<html>
 <head>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>touch_controls</title>
     <style>
     body, html {
-        height: 100%;
+        height: 100px;
         margin: 0;
         padding: 0;
     }
 
     canvas {
         display: block;
-        width: 100%;  /* Adapt width to the container size */
-        height: 100%; /* Adapt height to the container size */
-    }
+        position: absolute;
+		}
     </style>
 </head>
 <body>
     <canvas id="glcanvas"></canvas>
-
     <script type="text/javascript" src="js/patch.js" async></script>
     <script type="text/javascript">
         function showError(errId, errMsg) {
@@ -81,7 +81,7 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
                 "assetPath": "assets/",
                 "jsPath": "js/",
                 "glCanvasId": "glcanvas",
-                "glCanvasResizeToWindow": false,  // Changed to false to ensure it respects div dimensions
+                "glCanvasResizeToWindow": true,  // Changed to false to ensure it respects div dimensions
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
                 "onFinishedLoading": patchFinishedLoading
@@ -101,5 +101,5 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NzU4ODc0XX0=
+eyJoaXN0b3J5IjpbLTIzNDY4NjMzMSwxOTU3NTg4NzRdfQ==
 -->

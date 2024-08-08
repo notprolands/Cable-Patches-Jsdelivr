@@ -97,9 +97,17 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 </html>
 ```
 
+## Set the code embed to relative
+
+In position set it to relative. This will ensure that content is bound by the div and not overflowing.
+
+## Set code embed overflow hidden
+
+Code embed should have hidden overflow, not visible.
+
 ## Publish the site
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNDY4NjMzMSwxOTU3NTg4NzRdfQ==
+eyJoaXN0b3J5IjpbODM5NDI4NDcyLDE5NTc1ODg3NF19
 -->

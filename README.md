@@ -58,6 +58,8 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
     canvas {
         display: block;
         position: absolute;
+        width: 1000px;
+        height: 300px;
 		}
     </style>
 </head>
@@ -84,7 +86,7 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
                 "assetPath": "assets/",
                 "jsPath": "js/",
                 "glCanvasId": "glcanvas",
-                "glCanvasResizeToWindow": false,
+                "glCanvasResizeToWindow": false,  // Set to false to prevent strange resizing when pulling bottom border
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
                 "onFinishedLoading": patchFinishedLoading
@@ -99,7 +101,15 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 </body>
 </html>
 ```
-Warning: Ensure that `glCanvasResizeToWindow": false`
+Warning: Ensure that `glCanvasResizeToWindow": false` otherwise you may get strange resizing when pulling bottom border of window.
+
+Warning: Enusre 
+```canvas {
+        display: block;
+        position: absolute;
+        width: 1000px;
+        height: 300px;
+		}`
 
 
 ## Set the code embed to relative
@@ -114,6 +124,6 @@ Code embed should have hidden overflow, not visible.
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MjM5NjcyNywxMzg2MzQ2MDYsODM5ND
+eyJoaXN0b3J5IjpbLTQ2ODUyMTQ4MiwxMzg2MzQ2MDYsODM5ND
 I4NDcyLDE5NTc1ODg3NF19
 -->

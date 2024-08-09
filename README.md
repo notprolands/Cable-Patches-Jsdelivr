@@ -118,18 +118,21 @@ canvas {
 		}
 ```
 
+## Set code embed overflow hidden
+
+In Webflow UI set code embed container size `width: 100%`, `height: 100%` and overflow `hidden` (crossed out eye) overflow, not visible.
+
 ## Set the code embed to relative
 
 In Webflow UI, set position of the code embed container to `relative`. This will ensure that content is bound by the div and not overflowing. Position set to `static` will make it overflow everywhere.
 
-## Set code embed overflow hidden
 
-Code embed should have hidden overflow, not visible.
+
 
 ## Publish the site
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQxNzQxNSwxMzg2MzQ2MDYsODM5ND
+eyJoaXN0b3J5IjpbMjAwNjUzMjEyMiwxMzg2MzQ2MDYsODM5ND
 I4NDcyLDE5NTc1ODg3NF19
 -->

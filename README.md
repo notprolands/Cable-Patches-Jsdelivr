@@ -24,17 +24,11 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 
 ## Convert to Jsdelivr link
 
- - Go to https://www.jsdelivr.com/github
- - Paste GitHub link
- - Obtain Jsdelivr link
+ Go to https://www.jsdelivr.com/github. Paste GitHub link and obtain Jsdelivr link
 
 ## Change Webflow page settings
 
- - Go to Webflow editor
- - Select the page to edit
- - Click settings cog wheel
- - Scroll down to `before </body> tag`
- - Add the following line:
+Go to Webflow editor, select the page to edit. Click settings cog wheel and scroll down to `before </body> tag`. Add the following line:
 
 ```js
 <script src="https://cdn.jsdelivr.net/gh/notprolands/Cable-Testing@main/js/patch.js"></script>
@@ -42,8 +36,7 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 
 ## Create a code embed element on page
 
- - Select code embed element and put it into some sort of div
- - Past the following code into the element
+Select code embed element and put it into some sort of div. Past the following code into the element.
  
 ```html
 <html>
@@ -120,7 +113,7 @@ canvas {
 		}
 ```
 
-## Set code embed overflow hidden
+## Set Webflow code embed overflow hidden
 
 In Webflow UI set code embed container size width `100%`, height `100%` and overflow `hidden` (crossed out eye).
 
@@ -132,6 +125,6 @@ In Webflow UI, set position of the code embed container to `relative`. This will
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMTU5ODI4MCwxMzg2MzQ2MDYsODM5ND
+eyJoaXN0b3J5IjpbMTI3MTkzMzQ2OCwxMzg2MzQ2MDYsODM5ND
 I4NDcyLDE5NTc1ODg3NF19
 -->

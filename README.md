@@ -2,6 +2,10 @@
 
 The following describes how to successfully embed cables.gl patch that can take inputs from outside canvas (like touch) on Webflow.
 
+## Edit settings in cables.gl
+
+Set image compose node to manual 1000x1000 for example. This will prevent strange resizing when embedded in Webflow div.
+
 ## Export patch.js file
 
 From cables.gl export patch.js file. Ignore the rest.
@@ -81,7 +85,7 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
                 "assetPath": "assets/",
                 "jsPath": "js/",
                 "glCanvasId": "glcanvas",
-                "glCanvasResizeToWindow": true,  // Changed to false to ensure it respects div dimensions
+                "glCanvasResizeToWindow": false,  // Changed to false to ensure it respects div dimensions
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
                 "onFinishedLoading": patchFinishedLoading
@@ -109,5 +113,6 @@ Code embed should have hidden overflow, not visible.
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM5NDI4NDcyLDE5NTc1ODg3NF19
+eyJoaXN0b3J5IjpbMTM4NjM0NjA2LDgzOTQyODQ3MiwxOTU3NT
+g4NzRdfQ==
 -->

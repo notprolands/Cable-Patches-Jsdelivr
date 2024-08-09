@@ -2,6 +2,12 @@
 
 The following describes how to successfully embed cables.gl patch that can take inputs from outside canvas (like touch) on Webflow.
 
+## Edit settings in cables.gl
+
+Set image compose node size setting to to `manual` and `1000x1000` for example. This will prevent strange resizing when embedded in Webflow container.
+
+Set mouse or touch input are to `document`, to react to outputs outside of canvas.
+
 ## Export patch.js file
 
 From cables.gl export patch.js file. Ignore the rest.
@@ -18,17 +24,11 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 
 ## Convert to Jsdelivr link
 
- - Go to https://www.jsdelivr.com/github
- - Paste GitHub link
- - Obtain Jsdelivr link
+ Go to https://www.jsdelivr.com/github. Paste GitHub link and obtain Jsdelivr link
 
 ## Change Webflow page settings
 
- - Go to Webflow editor
- - Select the page to edit
- - Click settings cog wheel
- - Scroll down to `before </body> tag`
- - Add the following line:
+Go to Webflow editor, select the page to edit. Click settings cog wheel and scroll down to `before </body> tag`. Add the following line:
 
 ```js
 <script src="https://cdn.jsdelivr.net/gh/notprolands/Cable-Testing@main/js/patch.js"></script>
@@ -36,10 +36,8 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 
 ## Create a code embed element on page
 
- - Select code embed element and put it into some sort of div
- - Past the following code into the element
-
-
+Select code embed element and put it into some sort of div. Past the following code into the element.
+ 
 ```html
 <html>
 <head>
@@ -55,6 +53,8 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
     canvas {
         display: block;
         position: absolute;
+        width: 1000px;
+        height: 300px;
 		}
     </style>
 </head>
@@ -81,7 +81,7 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
                 "assetPath": "assets/",
                 "jsPath": "js/",
                 "glCanvasId": "glcanvas",
-                "glCanvasResizeToWindow": true,  // Changed to false to ensure it respects div dimensions
+                "glCanvasResizeToWindow": false,  // Set to false to prevent strange resizing when pulling bottom border
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
                 "onFinishedLoading": patchFinishedLoading
@@ -96,18 +96,39 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 </body>
 </html>
 ```
+Pay attention to the following.
+
+Set this to false otherwise you may get strange resizing when pulling bottom border of window.
+
+`glCanvasResizeToWindow": false`
+
+Set canvas to fixed width and height that fits into desired container.
+
+```html
+canvas {
+        display: block;
+        position: absolute;
+        width: 1000px;
+        height: 300px;
+		}
+```
+
+## Set Webflow code embed overflow hidden
+
+In Webflow UI set code embed container size width `100%`, height `100%` and overflow `hidden` (crossed out eye).
 
 ## Set the code embed to relative
 
-In position set it to relative. This will ensure that content is bound by the div and not overflowing.
+In Webflow UI, set position of the code embed container to `relative`. This will ensure that content is bound by the div and not overflowing. Position set to `static` will make it overflow everywhere.
 
-## Set code embed overflow hidden
+## Set code embed events to none
 
-Code embed should have hidden overflow, not visible.
+In Webflow UI, select code embed container and scroll down to effects section. Set events to `none`. This will prevent lack of scroll when user taps on the canvas. With `auto` when user taps to scroll on the canvas no movement happens, you have to move finger elswhere.
 
 ## Publish the site
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM5NDI4NDcyLDE5NTc1ODg3NF19
+eyJoaXN0b3J5IjpbLTIxMTE4NTM4OCwxMzg2MzQ2MDYsODM5ND
+I4NDcyLDE5NTc1ODg3NF19
 -->

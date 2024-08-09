@@ -42,8 +42,7 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 
  - Select code embed element and put it into some sort of div
  - Past the following code into the element
-
-
+ 
 ```html
 <html>
 <head>
@@ -85,7 +84,7 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
                 "assetPath": "assets/",
                 "jsPath": "js/",
                 "glCanvasId": "glcanvas",
-                "glCanvasResizeToWindow": false,  // Changed to false to ensure it respects div dimensions
+                "glCanvasResizeToWindow": false,
                 "onError": showError,
                 "onPatchLoaded": patchInitialized,
                 "onFinishedLoading": patchFinishedLoading
@@ -100,6 +99,8 @@ https://github.com/notprolands/Cable-Patches-Jsdelivr/blob/main/js/patch.js
 </body>
 </html>
 ```
+Warning: Ensure that `glCanvasResizeToWindow": false`
+
 
 ## Set the code embed to relative
 
@@ -113,6 +114,6 @@ Code embed should have hidden overflow, not visible.
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NjM0NjA2LDgzOTQyODQ3MiwxOTU3NT
-g4NzRdfQ==
+eyJoaXN0b3J5IjpbMTk5MjM5NjcyNywxMzg2MzQ2MDYsODM5ND
+I4NDcyLDE5NTc1ODg3NF19
 -->

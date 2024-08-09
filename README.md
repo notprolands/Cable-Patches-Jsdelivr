@@ -4,7 +4,9 @@ The following describes how to successfully embed cables.gl patch that can take 
 
 ## Edit settings in cables.gl
 
-Set image compose node to manual 1000x1000 for example. This will prevent strange resizing when embedded in Webflow div.
+Set image compose node size setting to to `manual` and `1000x1000` for example. This will prevent strange resizing when embedded in Webflow container.
+
+Set mouse or touch input are to `document`, to react to outputs outside of canvas.
 
 ## Export patch.js file
 
@@ -130,6 +132,6 @@ In Webflow UI, set position of the code embed container to `relative`. This will
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE1NTczMzEsMTM4NjM0NjA2LDgzOT
-QyODQ3MiwxOTU3NTg4NzRdfQ==
+eyJoaXN0b3J5IjpbMTAxMTU5ODI4MCwxMzg2MzQ2MDYsODM5ND
+I4NDcyLDE5NTc1ODg3NF19
 -->

@@ -121,10 +121,14 @@ In Webflow UI set code embed container size width `100%`, height `100%` and over
 
 In Webflow UI, set position of the code embed container to `relative`. This will ensure that content is bound by the div and not overflowing. Position set to `static` will make it overflow everywhere.
 
+## Set events to none
+
+In Webflow UI, select code embed container 
+
 ## Publish the site
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MTkzMzQ2OCwxMzg2MzQ2MDYsODM5ND
+eyJoaXN0b3J5IjpbMTc2MDA4NTE1MCwxMzg2MzQ2MDYsODM5ND
 I4NDcyLDE5NTc1ODg3NF19
 -->

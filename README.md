@@ -118,10 +118,9 @@ canvas {
 		}
 ```
 
-
 ## Set the code embed to relative
 
-In position set it to relative. This will ensure that content is bound by the div and not overflowing.
+In position set it to `relative`. This will ensure that content is bound by the div and not overflowing.
 
 ## Set code embed overflow hidden
 
@@ -131,6 +130,6 @@ Code embed should have hidden overflow, not visible.
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTIxNzcxNCwxMzg2MzQ2MDYsODM5ND
+eyJoaXN0b3J5IjpbMTU4NTEzNTE4OCwxMzg2MzQ2MDYsODM5ND
 I4NDcyLDE5NTc1ODg3NF19
 -->

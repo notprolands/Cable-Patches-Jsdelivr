@@ -12,7 +12,7 @@ Set mouse or touch input are to `document`, to react to outputs outside of canva
 
 From cables.gl export patch.js file. Ignore the rest.
 
-## Put the file on Github
+## Put the file on GitHub
 
 Add file to a GitHub repo, this folder.
 https://github.com/notprolands/Cable-Patches-Jsdelivr/tree/main/js
@@ -60,7 +60,6 @@ Select code embed element and put it into some sort of div. Past the following c
 </head>
 <body>
     <canvas id="glcanvas"></canvas>
-    <script type="text/javascript" src="js/patch.js" async></script>
     <script type="text/javascript">
         function showError(errId, errMsg) {
             // Handle critical errors here if needed
@@ -113,7 +112,7 @@ canvas {
 		}
 ```
 
-## Set Webflow code embed overflow hidden
+## Set code embed overflow hidden
 
 In Webflow UI set code embed container size width `100%`, height `100%` and overflow `hidden` (crossed out eye).
 
@@ -129,6 +128,6 @@ In Webflow UI, select code embed container and scroll down to effects section. S
 
 Changes wont be visible without publish.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTE4NTM4OCwxMzg2MzQ2MDYsODM5ND
-I4NDcyLDE5NTc1ODg3NF19
+eyJoaXN0b3J5IjpbLTE4OTk1MjQwOTEsLTIxMTE4NTM4OCwxMz
+g2MzQ2MDYsODM5NDI4NDcyLDE5NTc1ODg3NF19
 -->
